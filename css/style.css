@@ -1,89 +1,215 @@
+/* Base Element Styles */
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
-h1,
-h2,
-h3 {
-  text-align: center;
-  padding-top: 15px;
-  margin-bottom: 10px;
+body {
+	font-family: 'Alice', serif;
+	line-height: 1.5;
+}
+/*Base Layout Styles*/
+/* ---- Navigation ---- */
+.name a {
+	font-size: 1.25em;
+	margin: 0;
+	font-size: 25px;
+	text-align: center;
+}
+.main-nav li {
+	margin: 15px;
+	list-style: none;
+	max-width: 100%;
+}
+.name a,.main-nav {
+	display: block;
+	text-align: center;
+	padding: 10px 1px;
+	text-decoration: none;
+}
+.main-nav a {
+	color: #000;
+	text-transform: uppercase;
+}
+.main-nav a:hover {
+	color: #000;
+}
+/* ---- Layout Containers ---- */
+h2,h3 {
+	text-align: center;
+}
+p.introduction {
+	text-align: center;
+	padding: 10px;
+}
+.portfolio {
+	background: #fff;
+	display: inline-block;
+}
+.portfolio-title {
+	text-align: center;
 }
 
 p {
-  text-align: center;
-  padding: 0 15px;
-  margin-top: 0;
-  line-height: 1.5em;
-  letter-spacing: .3px;
-
+    text-align: center;
 }
-
-ul,
-li {
-  list-style-type: none;
-  padding-top: 25px;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-bottom: 10px;
+p.contact {
+	text-align: justify;
+    padding:10%;
+}
+p.phone {
+	text-align: center;
+}
+p.e-mail {
+	text-align: center;
+}
+/*Images*/
+.student-picture {
+	display: block;
+	max-width: 60%;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 img {
-  width: 100%;
-  padding: 20px 15px;
+	max-width: 100%;
+	display: block;
+  margin-left: -20px;
 }
-
-.container {
-  width: 100%;
-  text-align: center;
+li {
+	list-style: none;
 }
-
-.nav {
-  width: 100%;
-  padding: 5px;
+/*Footer*/
+.line-separator {
+	height: 1px;
+	border-bottom: 1px solid #c4c2c2;
 }
-
-.name {
-  width: 100%;
-
-}
-
-.footer-container {
-  width: 100%;
-  text-align: center;
-}
-
-.footer-name {
-  float: left;
+.studentname-footer {
+	display: inline-block;
+	float: left;
+  line-height: 0px;
+  padding-left: 5px;
+  padding-bottom: 5px;
 }
 .back-to-top {
-  float: right;
-  padding: 0 15px;
+	display: inline-block;
+	float: right;
+	list-style: none;
+  padding-right: 5px;
+  padding-bottom: 5px;
 }
-
-@media (min-width: 769px) {
-  .name {
-    float: left;
-    width: 50%;
-  }
-
-  .nav {
-    float: right;
-    width: 50%;
-  }
-
-  ul,
-  li {
-    float: left;
-  }
-
-  .logo {
-    width: 40%;
-    float: right;
-  }
-
-  .logo-header {
-    width: 60%
-    float: left;
-  }
-  
+.footer-nav {
+	display: none;
 }
+/*link*/
+a:link {
+
+	text-decoration: none;
+	font-size: 18px;
+}
+/* unvisited link */
+a:link {
+	color: black;
+}
+/* visited link */
+a:visited {
+	color: coral;
+}
+/* selected link */
+a:active {
+	color: cadetblue;
+}
+/*Media Queries*/
+@media (min-width: 768px) {
+	body {
+		padding-top: 5px;
+	}
+	.main-nav {
+		text-align: center;
+	}
+	.main-nav li {
+		display: inline-block;
+		margin-right: 1%;
+		margin-left: 2%;
+		background: none;
+
+
+	}
+	.student-picture {
+		float: right;
+		display: inline-block;
+		max-width: 35%;
+		margin-left: 10%;
+		margin-right: 6%;
+	}
+	p.introduction {
+		float: left;
+		width: 47.5%
+
+
+
+}
+	ul.products li {
+		width: 49%;
+		display: inline-block;
+		vertical-align: top;
+
+	}
+	ul.products {
+		margin-left: 1%;
+		margin-right: auto;
+	}
+	ul.footer-nav {
+		display: inline-block;
+		list-style-type: none;
+		float: right;
+	}
+	li {
+		display: inline;
+		padding-right: 20px;
+	}
+	.back-to-top {
+		display: none;
+	}
+
+}
+	@media (min-width: 1024px) {
+		.name {
+			float: left;
+			margin: 0 1%;
+			padding: 0 2px;
+		}
+		.main-nav {
+			display: inline-block;
+			float: right;
+			min-width: 350px;
+		}
+		.profile {
+			margin-top: 100px;
+		}
+		.student-picture {
+			float: right;
+      padding: 2em;
+		}
+		p.introduction {
+			float: left;
+      font-size:17px;
+      text-align: center;
+
+
+        }
+
+		ul.products li {
+			width: 33%;
+			display: inline-block;
+			vertical-align: top;
+
+		}
+		ul.products {
+			margin-left: 1%;
+			margin-right: auto;
+		}
+		p {
+			text-align: justify;
+		}
+
+
+    }
