@@ -1,215 +1,253 @@
 /* Base Element Styles */
+@font-face {
+  font-family: system;
+  font-style: normal;
+  font-weight: 300;
+  src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
+}
+
+.clearfix::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
 * {
 	box-sizing: border-box;
 }
+
 body {
-	font-family: 'Alice', serif;
-	line-height: 1.5;
+  font-family: "system";
 }
-/*Base Layout Styles*/
-/* ---- Navigation ---- */
-.name a {
-	font-size: 1.25em;
-	margin: 0;
-	font-size: 25px;
-	text-align: center;
-}
-.main-nav li {
-	margin: 15px;
-	list-style: none;
-	max-width: 100%;
-}
-.name a,.main-nav {
-	display: block;
-	text-align: center;
-	padding: 10px 1px;
-	text-decoration: none;
-}
-.main-nav a {
-	color: #000;
-	text-transform: uppercase;
-}
-.main-nav a:hover {
-	color: #000;
-}
-/* ---- Layout Containers ---- */
-h2,h3 {
-	text-align: center;
-}
-p.introduction {
-	text-align: center;
-	padding: 10px;
-}
-.portfolio {
-	background: #fff;
-	display: inline-block;
-}
-.portfolio-title {
+
+h1,
+h2,
+h3 {
+	font-weight: bold;
+	margin-top: 2rem;
+	margin-bottom: 1rem;
+	line-height: 1.1;
 	text-align: center;
 }
 
+h1 {
+	font-size: 2.25rem;
+}
+
+h2 {
+	font-size: 1.75rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+}
+
+
 p {
-    text-align: center;
-}
-p.contact {
-	text-align: justify;
-    padding:10%;
-}
-p.phone {
+	line-height: 1.5;
+	margin-bottom: 1.5rem;
 	text-align: center;
 }
-p.e-mail {
-	text-align: center;
-}
-/*Images*/
-.student-picture {
-	display: block;
-	max-width: 60%;
-	margin-left: auto;
-	margin-right: auto;
+
+a {
+	color: black;
+	text-decoration: none;
 }
 
 img {
+	padding: 0 10px;
+	width: 100%;
 	max-width: 100%;
+}
+
+.name {
+	text-align: center;
+}
+.student-picture {
+	padding-top: 20px;
+	padding-bottom: 15px;
+}
+.introduction {
+	padding: 0 10px;
+}
+
+.portfolio-title {
+	text-align: center;
+	margin-bottom: 20px;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+.main-nav li a {
+	text-align: center;
 	display: block;
-  margin-left: -20px;
+	padding: 12px;
+	font-weight: bold;
 }
-li {
-	list-style: none;
+
+.portfolio {
+	margin: 2rem 0;
+	hyphens: auto;
 }
-/*Footer*/
-.line-separator {
-	height: 1px;
-	border-bottom: 1px solid #c4c2c2;
-}
+
 .studentname-footer {
 	display: inline-block;
 	float: left;
-  line-height: 0px;
-  padding-left: 5px;
-  padding-bottom: 5px;
 }
+
 .back-to-top {
 	display: inline-block;
 	float: right;
-	list-style: none;
-  padding-right: 5px;
-  padding-bottom: 5px;
 }
+
 .footer-nav {
 	display: none;
 }
-/*link*/
-a:link {
 
-	text-decoration: none;
-	font-size: 18px;
-}
-/* unvisited link */
-a:link {
-	color: black;
-}
-/* visited link */
-a:visited {
-	color: coral;
-}
-/* selected link */
-a:active {
-	color: cadetblue;
-}
-/*Media Queries*/
-@media (min-width: 768px) {
-	body {
-		padding-top: 5px;
+@media screen and (min-width: 768px) {
+
+	.portfolio-title {
+		font-size: 24px;
 	}
+
+	p {
+		font-size: 24px;
+	}
+
+	h1 {
+		font-size: 1.5em;
+	}
+
+	h2 {
+		font-size: 1.5em;
+	}
+
+	h3 {
+		font-size: 1.5em;
+	}
+
+	.name {
+		display: block;
+		font-size: 30px;
+		margin-top: 40px;
+	}
+
 	.main-nav {
+		display: block;
 		text-align: center;
 	}
+
 	.main-nav li {
 		display: inline-block;
-		margin-right: 1%;
-		margin-left: 2%;
-		background: none;
-
+		padding-top: 27px;
+		padding-right: 20px;
+		font-size: 20px;
 
 	}
-	.student-picture {
-		float: right;
-		display: inline-block;
-		max-width: 35%;
-		margin-left: 10%;
-		margin-right: 6%;
-	}
-	p.introduction {
+
+	.introduction {
+		display: block;
 		float: left;
-		width: 47.5%
+		width: 60%;
+		padding: 40px 20px 20px 30px;
+		margin: 0 20px;
+	}
 
+	.student-picture {
+		display: block;
+		float: right;
+		width: 30%;
+		margin-right: 30px;
+	}
 
+	.portfolio-title {
+		display: inline-block;
+		width: 100%;
+	}
 
-}
 	ul.products li {
 		width: 49%;
 		display: inline-block;
 		vertical-align: top;
+}
 
+.back-to-top {
+	display: none;
+}
+.studentname-footer {
+	display: inline-block;
+	float: left;
+	text-align: left;
+}
+
+.footer-nav {
+	display: inline-block;
+	float: right;
+}
+
+.footer-nav li {
+	display: inline-block;
+	text-align: right;
+}
+
+
+}
+
+@media screen and (min-width: 1024px) {
+
+	.portfolio-title {
+		font-size: 24px;
 	}
-	ul.products {
-		margin-left: 1%;
-		margin-right: auto;
+
+	p {
+		font-size: 24px;
 	}
-	ul.footer-nav {
+
+	h1 {
+		font-size: 1.5em;
+	}
+
+	h2 {
+		font-size: 1.5em;
+	}
+
+	h3 {
+		font-size: 1.5em;
+	}
+
+
+	.name {
 		display: inline-block;
-		list-style-type: none;
+		float: left;
+		padding-left: 20px;
+		font-size: 2em;
+	}
+
+	.main-nav {
+		display: inline-block;
 		float: right;
 	}
-	li {
-		display: inline;
+
+	.main-nav li {
+		display: inline-block;
+		float: left;
+		padding-top: 27px;
 		padding-right: 20px;
+		font-size: 1.75em;
 	}
-	.back-to-top {
-		display: none;
+
+	.portfolio-title {
+		font-size:
+	}
+
+	ul.products li {
+		width: 32%;
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	.contact-title {
+		margin-top: 5em;
 	}
 
 }
-	@media (min-width: 1024px) {
-		.name {
-			float: left;
-			margin: 0 1%;
-			padding: 0 2px;
-		}
-		.main-nav {
-			display: inline-block;
-			float: right;
-			min-width: 350px;
-		}
-		.profile {
-			margin-top: 100px;
-		}
-		.student-picture {
-			float: right;
-      padding: 2em;
-		}
-		p.introduction {
-			float: left;
-      font-size:17px;
-      text-align: center;
-
-
-        }
-
-		ul.products li {
-			width: 33%;
-			display: inline-block;
-			vertical-align: top;
-
-		}
-		ul.products {
-			margin-left: 1%;
-			margin-right: auto;
-		}
-		p {
-			text-align: justify;
-		}
-
-
-    }
