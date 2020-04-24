@@ -16,6 +16,10 @@
 	box-sizing: border-box;
 }
 
+html {
+  font-size: 20px;
+}
+
 body {
   font-family: "system";
 }
@@ -75,7 +79,7 @@ img {
 	text-align: center;
 	margin-bottom: 20px;
 	font-weight: bold;
-	font-size: 18px;
+	font-size: 1.75rem;
 }
 
 .main-nav li a {
@@ -106,25 +110,10 @@ img {
 
 @media screen and (min-width: 768px) {
 
-	.portfolio-title {
-		font-size: 24px;
-	}
+  html {
+    font-size: calc(20px + 6 * ((100vw - 320px) / 704));
+  }
 
-	p {
-		font-size: 24px;
-	}
-
-	h1 {
-		font-size: 1.5em;
-	}
-
-	h2 {
-		font-size: 1.5em;
-	}
-
-	h3 {
-		font-size: 1.5em;
-	}
 
 	.name {
 		display: block;
@@ -195,32 +184,14 @@ img {
 
 @media screen and (min-width: 1024px) {
 
-	.portfolio-title {
-		font-size: 24px;
-	}
-
-	p {
-		font-size: 24px;
-	}
-
-	h1 {
-		font-size: 1.5em;
-	}
-
-	h2 {
-		font-size: 1.5em;
-	}
-
-	h3 {
-		font-size: 1.5em;
-	}
-
+  html {
+    font-size: 28px;
+  }
 
 	.name {
 		display: inline-block;
 		float: left;
 		padding-left: 20px;
-		font-size: 2em;
 	}
 
 	.main-nav {
@@ -233,11 +204,6 @@ img {
 		float: left;
 		padding-top: 27px;
 		padding-right: 20px;
-		font-size: 1.75em;
-	}
-
-	.portfolio-title {
-		font-size:
 	}
 
 	ul.products li {
@@ -247,7 +213,15 @@ img {
 	}
 
 	.contact-title {
-		margin-top: 5em;
+		margin-top: 40px;
 	}
+
+  .portfolio,
+  .profile,
+  .main-header {
+    max-width: 1330px;
+    margin: 0 auto;
+  }
+
 
 }
