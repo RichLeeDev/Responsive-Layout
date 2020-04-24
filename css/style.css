@@ -94,14 +94,22 @@ img {
 	hyphens: auto;
 }
 
+p.contact {
+  padding: 15px 35px;
+}
+
+
 .studentname-footer {
 	display: inline-block;
 	float: left;
+  margin-left: 20px;
 }
 
 .back-to-top {
 	display: inline-block;
 	float: right;
+  margin-top: 50px;
+  margin-right: 20px;
 }
 
 .footer-nav {
@@ -176,7 +184,8 @@ img {
 
 .footer-nav li {
 	display: inline-block;
-	text-align: right;
+	text-align: center;
+  margin: 50px 10px 0px 10px;
 }
 
 
